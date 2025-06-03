@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Prompt user for a number
+echo "Enter a number:"
+read number
+
+# Initialize reverse variable
+reverse=0
+
+# Loop to reverse the number
+while [ $number -gt 0 ]
+do
+    remainder=$(( number % 10 ))
+    reverse=$(( reverse * 10 + remainder ))
+    number=$(( number / 10 ))
+done
+
+# Display the reversed number
+echo "Reversed number: $reverse"
